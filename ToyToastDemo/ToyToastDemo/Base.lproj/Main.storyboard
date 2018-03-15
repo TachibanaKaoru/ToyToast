@@ -22,17 +22,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cs-IE-tZh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cs-IE-tZh">
                                 <rect key="frame" x="105" y="36" width="149" height="30"/>
                                 <state key="normal" title="Show DarkGray Toast">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="showDarkGrayToast:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kgU-0b-G5h"/>
+                                    <action selector="showDarkGrayToast:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vlZ-y7-lW8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1im-Lf-KfZ">
-                                <rect key="frame" x="112.66666666666669" y="139" width="150" height="30"/>
+                                <rect key="frame" x="113.33333333333333" y="139" width="149.33333333333337" height="30"/>
                                 <state key="normal" title="Show White Toast">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -58,13 +58,13 @@
                                     <action selector="showToastWithoutTitle:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Lnx-jZ-xEV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fir-mS-Wjh">
-                                <rect key="frame" x="98" y="84" width="151" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fir-mS-Wjh">
+                                <rect key="frame" x="112.66666666666669" y="84" width="150" height="30"/>
                                 <state key="normal" title="Show LightGray Toast">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="showLightGrayToast:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="H4o-gR-dbc"/>
+                                    <action selector="showLightGrayToast:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="R3h-l8-O12"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -77,7 +77,7 @@
                             <constraint firstAttribute="centerX" secondItem="1im-Lf-KfZ" secondAttribute="centerX" id="ITs-NY-fab"/>
                             <constraint firstItem="1im-Lf-KfZ" firstAttribute="trailing" secondItem="fir-mS-Wjh" secondAttribute="trailing" id="OG8-j7-Hu8"/>
                             <constraint firstItem="1im-Lf-KfZ" firstAttribute="top" secondItem="fir-mS-Wjh" secondAttribute="bottom" constant="25" id="Sbb-En-08O"/>
-                            <constraint firstAttribute="centerX" secondItem="0cs-IE-tZh" secondAttribute="centerX" id="TjW-s0-5do"/>
+                            <constraint firstAttribute="centerX" secondItem="0cs-IE-tZh" secondAttribute="centerX" constant="8" id="TjW-s0-5do"/>
                             <constraint firstAttribute="centerX" secondItem="pCC-8O-Z26" secondAttribute="centerX" id="VkO-id-AAo"/>
                             <constraint firstAttribute="centerX" secondItem="fir-mS-Wjh" secondAttribute="centerX" id="aCa-WZ-eob"/>
                             <constraint firstItem="0cs-IE-tZh" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="-8" id="cEP-2y-Sfo"/>

@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func showDarkGrayToast(sender: AnyObject) {
+    @IBAction func showDarkGrayToast(_ sender: Any) {
         
         var mytoast : ToyToastViewController = ToyToastViewController(
             title:"Lorem ipsum",
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
 
     }
 
-    @IBAction func showLightGrayToast(sender: AnyObject) {
+    @IBAction func showLightGrayToast(_ sender: Any) {
         
         var mytoast : ToyToastViewController = ToyToastViewController(
             title:"Lorem ipsum",
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
 
     }
     
-    @IBAction func showWhiteToast(sender: AnyObject) {
+    @IBAction func showWhiteToast(_ sender: Any) {
         
         var mytoast : ToyToastViewController = ToyToastViewController(
             title:"Lorem ipsum",
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
 
     }
 
-    @IBAction func showToastLonger(sender: AnyObject) {
+    @IBAction func showToastLonger(_ sender: Any) {
         
         var mytoast : ToyToastViewController = ToyToastViewController(
             title:"Lorem ipsum",
@@ -73,7 +73,7 @@ class ViewController: UIViewController {
 
     }
     
-    @IBAction func showToastWithoutTitle(sender: AnyObject) {
+    @IBAction func showToastWithoutTitle(_ sender: Any) {
         
         var mytoast : ToyToastViewController = ToyToastViewController(
             title:"",
