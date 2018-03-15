@@ -1,8 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14105" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,62 +19,69 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cs-IE-tZh">
-                                <rect key="frame" x="226" y="35" width="149" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cs-IE-tZh">
+                                <rect key="frame" x="105" y="36" width="149" height="30"/>
                                 <state key="normal" title="Show DarkGray Toast">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="showDarkGrayToast:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kgU-0b-G5h"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fir-mS-Wjh">
-                                <rect key="frame" x="225" y="85" width="151" height="30"/>
-                                <state key="normal" title="Show LightGray Toast">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="showLightGrayToast:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="H4o-gR-dbc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1im-Lf-KfZ">
-                                <rect key="frame" x="239" y="139" width="123" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1im-Lf-KfZ">
+                                <rect key="frame" x="112.66666666666669" y="139" width="150" height="30"/>
                                 <state key="normal" title="Show White Toast">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="showWhiteToast:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9Jo-2u-Odj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCC-8O-Z26">
-                                <rect key="frame" x="212" y="200" width="177" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCC-8O-Z26">
+                                <rect key="frame" x="99" y="200" width="177" height="30"/>
                                 <state key="normal" title="Show Toast in longer time">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="showToastLonger:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oaU-zk-3Vo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWy-uF-UCE">
-                                <rect key="frame" x="218" y="253" width="164" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWy-uF-UCE">
+                                <rect key="frame" x="106" y="253" width="164" height="30"/>
                                 <state key="normal" title="Show Toast without title">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="showToastWithoutTitle:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Lnx-jZ-xEV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fir-mS-Wjh">
+                                <rect key="frame" x="98" y="84" width="151" height="30"/>
+                                <state key="normal" title="Show LightGray Toast">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showLightGrayToast:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="H4o-gR-dbc"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="yWy-uF-UCE" firstAttribute="top" secondItem="pCC-8O-Z26" secondAttribute="bottom" constant="23" id="0BT-vg-TdA"/>
+                            <constraint firstItem="0cs-IE-tZh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="89" id="3yS-0f-OaK"/>
+                            <constraint firstItem="fir-mS-Wjh" firstAttribute="top" secondItem="0cs-IE-tZh" secondAttribute="bottom" constant="18" id="4fo-hF-0dS"/>
                             <constraint firstAttribute="centerX" secondItem="yWy-uF-UCE" secondAttribute="centerX" id="AgM-Fk-a8w"/>
                             <constraint firstAttribute="centerX" secondItem="1im-Lf-KfZ" secondAttribute="centerX" id="ITs-NY-fab"/>
+                            <constraint firstItem="1im-Lf-KfZ" firstAttribute="trailing" secondItem="fir-mS-Wjh" secondAttribute="trailing" id="OG8-j7-Hu8"/>
+                            <constraint firstItem="1im-Lf-KfZ" firstAttribute="top" secondItem="fir-mS-Wjh" secondAttribute="bottom" constant="25" id="Sbb-En-08O"/>
                             <constraint firstAttribute="centerX" secondItem="0cs-IE-tZh" secondAttribute="centerX" id="TjW-s0-5do"/>
                             <constraint firstAttribute="centerX" secondItem="pCC-8O-Z26" secondAttribute="centerX" id="VkO-id-AAo"/>
                             <constraint firstAttribute="centerX" secondItem="fir-mS-Wjh" secondAttribute="centerX" id="aCa-WZ-eob"/>
+                            <constraint firstItem="0cs-IE-tZh" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="-8" id="cEP-2y-Sfo"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="yWy-uF-UCE" secondAttribute="bottom" constant="495" id="nwc-yB-dng"/>
                         </constraints>
                     </view>
                 </viewController>
