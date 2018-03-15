@@ -22,7 +22,7 @@ class ViewController: UIViewController {
 
     @IBAction func showDarkGrayToast(_ sender: Any) {
         
-        var mytoast : ToyToastViewController = ToyToastViewController(
+        let mytoast : ToyToastViewController = ToyToastViewController(
             title:"Lorem ipsum",
             message:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             style:ColorStyle.DarkGray)
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
 
     @IBAction func showLightGrayToast(_ sender: Any) {
         
-        var mytoast : ToyToastViewController = ToyToastViewController(
+        let mytoast : ToyToastViewController = ToyToastViewController(
             title:"Lorem ipsum",
             message:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             style:ColorStyle.LightGray)
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
     
     @IBAction func showWhiteToast(_ sender: Any) {
         
-        var mytoast : ToyToastViewController = ToyToastViewController(
+        let mytoast : ToyToastViewController = ToyToastViewController(
             title:"Lorem ipsum",
             message:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             style:ColorStyle.White)
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
 
     @IBAction func showToastLonger(_ sender: Any) {
         
-        var mytoast : ToyToastViewController = ToyToastViewController(
+        let mytoast : ToyToastViewController = ToyToastViewController(
             title:"Lorem ipsum",
             message:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             style:ColorStyle.DarkGray)
@@ -75,7 +75,7 @@ class ViewController: UIViewController {
     
     @IBAction func showToastWithoutTitle(_ sender: Any) {
         
-        var mytoast : ToyToastViewController = ToyToastViewController(
+        let mytoast : ToyToastViewController = ToyToastViewController(
             title:"",
             message:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             style:ColorStyle.White)
