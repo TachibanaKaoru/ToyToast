@@ -27,7 +27,7 @@ class ViewController: UIViewController {
             message:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             style:ColorStyle.DarkGray)
         
-        self.presentViewController(mytoast,
+        self.present(mytoast,
             animated: true,
             completion: nil)
 
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
             message:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             style:ColorStyle.LightGray)
         
-        self.presentViewController(mytoast,
+        self.present(mytoast,
             animated: true,
             completion: nil)
 
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
             message:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             style:ColorStyle.White)
         
-        self.presentViewController(mytoast,
+        self.present(mytoast,
             animated: true,
             completion: nil)
 
@@ -67,7 +67,7 @@ class ViewController: UIViewController {
             style:ColorStyle.DarkGray)
         mytoast.showtime = 5.0
         
-        self.presentViewController(mytoast,
+        self.present(mytoast,
             animated: true,
             completion: nil)
 
@@ -80,7 +80,7 @@ class ViewController: UIViewController {
             message:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             style:ColorStyle.White)
         
-        self.presentViewController(mytoast,
+        self.present(mytoast,
             animated: true,
             completion: nil)
 

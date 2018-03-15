@@ -19,11 +19,11 @@ enum ColorStyle{
         
         switch self{
         case .DarkGray:
-            return UIColor.darkGrayColor()
+            return UIColor.darkGray
         case .LightGray:
-            return UIColor.lightGrayColor()
+            return UIColor.lightGray
         case .White:
-            return UIColor.whiteColor()
+            return UIColor.white
         }
         
     }
@@ -32,11 +32,11 @@ enum ColorStyle{
         
         switch self{
         case .DarkGray:
-            return UIColor.whiteColor()
+            return UIColor.white
         case .LightGray:
-            return UIColor.whiteColor()
+            return UIColor.white
         case .White:
-            return UIColor.darkGrayColor()
+            return UIColor.darkGray
         }
 
     }
@@ -46,7 +46,7 @@ enum ColorStyle{
 ToyToast
 Simple Toast Dialog
 */
-@availability(iOS, introduced=7.0)
+@available(iOS, introduced: 7.0)
 class ToyToastViewController : UIViewController{
     
     // MARK: - properties
@@ -56,7 +56,7 @@ class ToyToastViewController : UIViewController{
     /// color of toast and text. see ColorStyle enum
     var colorstyle : ColorStyle = ColorStyle.DarkGray
     /// transitionStyle in showing toast. default is CrossDissolve
-    var transitionStyle : UIModalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+    var transitionStyle : UIModalTransitionStyle = UIModalTransitionStyle.crossDissolve
     
     // MARK: - private properties
 
@@ -67,13 +67,13 @@ class ToyToastViewController : UIViewController{
     
     // MARK: - init
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         
         super.init(coder: aDecoder)
         
     }
     
-    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
+    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: Bundle!) {
        
         super.init(nibName: nil, bundle: nil)
 
@@ -87,40 +87,42 @@ class ToyToastViewController : UIViewController{
         
         setStyle()
         buildBaseView()
-        
-        if count(title!) > 0 {
-            
-            let textrect : CGRect = baseview.bounds.rectByInsetting(dx: 10.0, dy: 10.0)
-            let textrects : (CGRect,CGRect) = textrect.rectsByDividing(17.0, fromEdge: .MinYEdge)
+
+
+        if let title = title, title.count > 0 {
+
+            let textrect : CGRect = baseview.bounds.insetBy(dx: 10.0, dy: 10.0)
+
+            let textrects : (CGRect,CGRect) = textrect.divided(atDistance: 17.0, from: .minYEdge)
             let titlerect = textrects.0
             let messagerect = textrects.1
             
             // titlelabel
             let titlelabel : UILabel = UILabel(frame: titlerect)
-            titlelabel.text = title!
-            titlelabel.font = UIFont.systemFontOfSize(15.0)
-            titlelabel.textAlignment = .Center
+            titlelabel.text = title
+            titlelabel.font = UIFont.systemFont(ofSize: 15.0)
+            titlelabel.textAlignment = .center
             titlelabel.textColor = colorstyle.textcolor
             baseview.addSubview(titlelabel)
             
             // messagelabel
             let messagelabel : UILabel = UILabel(frame: messagerect)
             messagelabel.text = message!
-            messagelabel.font = UIFont.systemFontOfSize(12.0)
+            messagelabel.font = UIFont.systemFont(ofSize: 12.0)
             messagelabel.numberOfLines = 0
             messagelabel.textColor = colorstyle.textcolor
             baseview.addSubview(messagelabel)
             
         }
         else{
-            
-            let textrect : CGRect = baseview.bounds.rectByInsetting(dx: 10.0, dy: 10.0)
+
+            let textrect : CGRect = baseview.bounds.insetBy(dx: 10.0, dy: 10.0)
             let messagerect = textrect
             
             // messagelabel
             let messagelabel : UILabel = UILabel(frame: messagerect)
             messagelabel.text = message!
-            messagelabel.font = UIFont.systemFontOfSize(12.0)
+            messagelabel.font = UIFont.systemFont(ofSize: 12.0)
             messagelabel.numberOfLines = 0
             messagelabel.textColor = colorstyle.textcolor
             baseview.addSubview(messagelabel)
@@ -137,29 +139,26 @@ class ToyToastViewController : UIViewController{
 
         if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_7_1) {
             
-            self.modalPresentationStyle = .CurrentContext
+            self.modalPresentationStyle = .currentContext
             
         }
         else{
             
-            self.modalPresentationStyle = .OverFullScreen
+            self.modalPresentationStyle = .overFullScreen
             
         }
     }
     
     private func buildBaseView() -> Void{
         
-        let mainrect = UIScreen.mainScreen().bounds
-        self.view.backgroundColor = UIColor.clearColor()
+        let mainrect = UIScreen.main.bounds
+        self.view.backgroundColor = UIColor.clear
         
         let leftmargin : CGFloat = 0.15
         let topmargin : CGFloat = 0.4
-        
-        baseview = UIView(frame: CGRectMake(
-            mainrect.size.width * leftmargin,
-            mainrect.size.height * topmargin,
-            mainrect.size.width * (1.0 - leftmargin * 2),
-            mainrect.size.height * (1.0 - topmargin * 2)))
+
+        let newRect = CGRect(x: mainrect.size.width * leftmargin, y: mainrect.size.height * topmargin, width: mainrect.size.width * (1.0 - leftmargin * 2), height: mainrect.size.height * (1.0 - topmargin * 2))
+        baseview = UIView(frame: newRect)
         baseview.backgroundColor = colorstyle.basecolor
         
         baseview.layer.cornerRadius = 5;
@@ -170,16 +169,16 @@ class ToyToastViewController : UIViewController{
     
     // MARK: - hide dialog in viewDidAppear
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
         super.viewDidAppear(animated)
         
-        UIView.animateWithDuration(0.5,
+        UIView.animate(withDuration: 0.5,
             
             delay: showtime,
             usingSpringWithDamping: 1.0,
             initialSpringVelocity: 1.0,
-            options: UIViewAnimationOptions.CurveEaseInOut,
+            options: [UIViewAnimationOptions.curveEaseInOut],
             animations: {() -> Void in
                 
                 if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_7_1) {
@@ -194,7 +193,7 @@ class ToyToastViewController : UIViewController{
             },
             completion:{ (Bool) -> Void in
                 
-                self.dismissViewControllerAnimated(false, completion: nil)
+                self.dismiss(animated: false, completion: nil)
                 
             }
         )
